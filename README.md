@@ -1,5 +1,7 @@
 ## Continuous integration
 
+The whole project is made in python
+
 ### Task 0:
 The CI is in place [![CI](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/workflows/ci.yml/badge.svg)](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/workflows/ci.yml)
 
@@ -12,3 +14,13 @@ The CI is in place [![CI](https://github.com/ToujoursPareil8/holbertonschool-con
 ### Task 2:
 
 [Proof of version testing](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33058664956)
+
+
+### Task 3:
+
+| Elements | Before | After |
+| :--- | :---: | :---: |
+| **Run time** | [12s](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33109131512)| [15s](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33109607457) |
+
+**Technical Note: Caching Overhead (Python vs. JavaScript)**
+Caching this Python micro-project adds a slight time overhead because extracting the cache archive takes longer than downloading a single pip dependency. Conversely, JavaScript ecosystems generate massive dependency trees where raw installations take minutes, making caching instantly profitable. This setup is a proactive architectural investment to maintain pipeline speed as heavier libraries are integrated.
