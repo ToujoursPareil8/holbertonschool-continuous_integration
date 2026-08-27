@@ -24,3 +24,7 @@ The CI is in place [![CI](https://github.com/ToujoursPareil8/holbertonschool-con
 
 **Technical Note: Caching Overhead (Python vs. JavaScript)**
 Caching this Python micro-project adds a slight time overhead because extracting the cache archive takes longer than downloading a single pip dependency. Conversely, JavaScript ecosystems generate massive dependency trees where raw installations take minutes, making caching instantly profitable. This setup is a proactive architectural investment to maintain pipeline speed as heavier libraries are integrated.
+
+### Task 4:
+
+The job is done [successfully](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33113558422/job/98662407227)
