@@ -1,0 +1,24 @@
+name: Test Suite
+
+# Trigger : this will only start when we make a PR targeting the main branch
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # We use unittest, the base Python test framework.
+      - name: Execute Tests
+        run: python -m unittest test_main.py
