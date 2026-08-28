@@ -60,7 +60,7 @@ jobs:
 
       - name: Run Tests
         run: pytest
-        
+
   deploy:        
     name: Deploy to Production
     runs-on: ubuntu-latest
@@ -76,7 +76,7 @@ jobs:
         run: |
           echo "Verification of prerequisites for deployment..."
           
-          if [-z "$API_TOKEN"]; then
+          if [ -z "$API_TOKEN" ]; then
             echo "CRITICAL ERROR: The production token is missing or empty."
             exit 1
           else 

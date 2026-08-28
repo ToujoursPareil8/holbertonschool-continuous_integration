@@ -1,5 +1,4 @@
-## Continuous integration
-
+# Continuous Integration with GitHub Actions
 The whole project is made in python
 
 ### Task 0:
@@ -28,3 +27,7 @@ Caching this Python micro-project adds a slight time overhead because extracting
 ### Task 4:
 
 The job is done [successfully](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33113558422/job/98662407227)
+
+# Building & Publishing Docker Images in CI
+
+### Task 0:
