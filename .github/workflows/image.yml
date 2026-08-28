@@ -30,6 +30,15 @@ jobs:
       - name: Build Docker Image
         run: docker build -t holbertonschool-continuous_integrations:latest .
 
+      - name: Build Docker Image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: false
+          tags: holbertonschool-continuous_integrations:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
   publish:
     name: Publish to GHCR
     runs-on: ubuntu-latest
