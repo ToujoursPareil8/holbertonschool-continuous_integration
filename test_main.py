@@ -1,14 +1,15 @@
 import unittest
+from app import app
 
 
 class TestApplication(unittest.TestCase):
-    def test_addition(self):
-        # True, test success
-        self.assertEqual(1 + 1, 2)
+    def setUp(self):
+        self.client = app.test_client()
 
-    def test_deliberate_failure(self):
-        # False. meant to fail here
-        self.assertEqual(2 + 2, 4)
+    def test_hello_default_greeting(self):
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b"Default Welcome Message", response.data)
 
 
 if __name__ == '__main__':
