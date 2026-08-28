@@ -43,4 +43,12 @@ Docker image build: [Builds successfully](https://github.com/ToujoursPareil8/hol
 [GHCR package](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/pkgs/container/holbertonschool-continuous_integration/1183551639?tag=27830570938311e5f4f08b4e20127c531d7cfdd1)
 
 
-### Task 2:
+### Task 3:
+
+| | Duration | Run |
+|---|---|---|
+| Before caching | 50s | [run #10](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33198129084) |
+| After caching (warm cache) | 52s | [run #14](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33204111203) |
+
+Note: gain from caching is negligible on this project due to its minimal dependency set (Flask, Werkzeug). Caching would show a larger benefit on projects with heavier or more numerous dependencies.
+</br>
