@@ -31,3 +31,5 @@ The job is done [successfully](https://github.com/ToujoursPareil8/holbertonschoo
 # Building & Publishing Docker Images in CI
 
 ### Task 0:
+
+Docker image build: [Builds successfully](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33193527852)
