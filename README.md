@@ -52,3 +52,12 @@ Docker image build: [Builds successfully](https://github.com/ToujoursPareil8/hol
 
 Note: gain from caching is negligible on this project due to its minimal dependency set (Flask, Werkzeug). Caching would show a larger benefit on projects with heavier or more numerous dependencies.
 </br>
+
+
+### Task 4:
+
+This pipeline scans every built image with [Trivy](https://github.com/ToujoursPareil8/holbertonschool-continuous_integration/actions/runs/33206951486/job/98970311798)
+
+**Blocking severity:** `CRITICAL`
+- If a critical vulnerability is found, the build fails and **no image is published** to the registry.
+- Lower severities (`LOW`, `MEDIUM`, `HIGH`) are currently not blocking, to avoid halting shipping on non-exploitable or low-risk findings, this limit can be adjusted later as the project matures
