@@ -37,9 +37,18 @@ jobs:
         with:
           context: .
           push: false
+          load: true
           tags: holbertonschool-continuous_integrations:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+      - name: Scan image for vulnerabilities
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: holbertonschool-continuous_integrations:latest
+          format: table
+          severity: CRITICAL
+          exit-code: '1'
 
   publish:
     name: Publish to GHCR
